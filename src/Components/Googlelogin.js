@@ -11,12 +11,6 @@ function Googlelogin() {
         history.push("/Homepage")
     };
 
-    const onFailure = (res) => {
-        console.log('Login failed: res:', res);
-        alert(
-            `Failed to login.`
-        );
-    };
 
     return (
         <>
@@ -24,7 +18,6 @@ function Googlelogin() {
                 clientId={clientId}
                 buttonText="Login"
                 onSuccess={onSuccess}
-                onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
                 style={{ marginTop: '100px' }}
                 isSignedIn={false}
